@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.strateknia'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    libs = [
+            avro                : 'org.apache.avro:avro:1.12.0',
+            kafka               : 'org.apache.kafka:kafka-clients:3.9.0',
+            log4j               : 'org.slf4j:slf4j-simple:2.0.16',
+            lombok              : 'org.projectlombok:lombok:1.18.34',
+            pico_cli            : 'info.picocli:picocli:4.7.6',
+    ]
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+
+test {
+    useJUnitPlatform()
+}

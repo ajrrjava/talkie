@@ -1,0 +1,10 @@
+rootProject.name = 'talkie'
+include 'client'
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+}
+
+
